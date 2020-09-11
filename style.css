@@ -108,9 +108,11 @@ body {
         box-shadow: 0 6px 6px var(--pale-blue);
         cursor: pointer;
     }
-    .form__button:hover {
-        opacity: .8;
-        /* background-color: var(--pale-blue); */
+    @media (min-width: 800px) {
+        .form__button:hover {
+            opacity: .8;
+            /* background-color: var(--pale-blue); */
+        }
     }
     @media (min-width: 800px) {
         .form__button {
@@ -124,22 +126,32 @@ body {
     width: 100%;
     margin-bottom: 4rem;
 }
-.social-buttons {
+.social__buttons {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-    .social-link {
+    .social__link {
         display: inline-block;
         padding: 8px;
         border: 1px solid lightgray;
         border-radius: 50%;
         margin: 0 4px;
+        color: var(--blue);
     }
-    .social-buttons img {
+    @media (min-width: 800px) {
+        .social__link:hover {
+            color: #fff;
+            background-color: var(--blue);
+            border: 1px solid var(--blue);
+        }
+    }
+    .social__icon {
         display: block;
-        width: 20px;
+        /*This !important is necessary*/
+        width: 20px !important;
         height: 20px;
-        
+        /* This helps inherit from the link hover */
+        color: inherit;
     }
 .copyright {
     font-size: 12px;
