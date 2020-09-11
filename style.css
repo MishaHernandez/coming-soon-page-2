@@ -95,7 +95,10 @@ body {
         .input-error {
             border: 1px solid var(--light-red);
         }
-        .show-message {
+        .show-error-email {
+            display: block;
+        }
+        .show-error-empty {
             display: block;
         }
         @media (min-width: 800px) {

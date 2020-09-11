@@ -7,14 +7,26 @@ form.addEventListener('submit', (e)=> {
 
 function validate () {
     const email = document.getElementById('email')
-    const message = document.getElementById('input-message')
+    const messageErrorEmail = document.getElementById('input-error-email')
+    const messageErrorEmpty = document.getElementById('input-error-empty')
     var regex = /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    console.log(email)
-    if (regex.test(email.value.trim())) {
-        email.classList.remove('input-error')
-        message.classList.remove('show-message')
-    } else {
+    
+    if (email.value === "") {
         email.classList.add('input-error')
-        message.classList.add('show-message')
+        messageErrorEmail.classList.remove('show-error-email')
+        messageErrorEmpty.classList.add('show-error-empty')
+
+    } else {
+        email.classList.remove('input-error')
+        messageErrorEmpty.classList.remove('show-error-empty')
+
+        if (regex.test(email.value.trim())) {
+            email.classList.remove('input-error')
+            messageErrorEmail.classList.remove('show-error-email')
+        } else {
+            email.classList.add('input-error')
+            messageErrorEmail.classList.add('show-error-email')
+        }
+
     }
 }
