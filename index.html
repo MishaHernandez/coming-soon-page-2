@@ -6,32 +6,33 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Ping coming soon page</title>
 
 </head>
 <body>
 
   <div class="container">
-    <img src="images/logo.svg" alt="">
-    
-    <h1 class="title">We are launching soon!</h1 class="title">
+    <img class="logo" src="images/logo.svg" alt="page's logo">
+
+    <h1 class="title">We are launching <span class="title__span">soon!</span></h1 class="title">
   
     <h2 class="subtitle">Subscribe and get notified</h2>
   
     <form class="form" id="form" action="#">
       <div class="form__input">
-        <input type="form__input-email" name="email" id="email" placeholder="Your email address...">
+        <input type="email" name="email" class="form__input-email" id="email" placeholder="Your email address...">
         <p class="form__input-message">Please provide a valid email address</p>
       </div>
       <button class="form__button" title="subscribe button">Notify Me</button>
     </form>
   
-    <img src="images/illustration-dashboard.png" alt="dashboard image">
+    <img class="illustration" src="images/illustration-dashboard.png" alt="dashboard image">
   
     <div class="social-buttons">
-      <img src="images/facebook-f.svg" alt="facebook page">
-      <img src="images/twitter.svg" alt="twitter page">
-      <img src="images/instagram.svg" alt="instagram page">
+      <a href="#" class="social-link"><img src="images/facebook-f.svg" alt="facebook page"></a>
+      <a href="#" class="social-link"><img src="images/twitter.svg" alt="twitter page"></a>
+      <a href="#" class="social-link"><img src="images/instagram.svg" alt="instagram page"></a>
     </div>
   
     <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
